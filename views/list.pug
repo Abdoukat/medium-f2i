@@ -1,0 +1,11 @@
+extends layout.pug 
+block content 
+    .container
+        h1= "Liste des"
+        each item in article
+            h3=item.title
+            p=item.content
+            a(href=`/api/articles/${item.id}/delete`) supprimer
+            a(href=`/api/articles/${item.id}/update`) supprimer
+            hr
+        
